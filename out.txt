@@ -1,0 +1,49 @@
+Optimizer                Gradient        Number epoch      Last MSE
+Numb features: 2
+Opt: No optimizer        grad: OLS        epoch:  99      mse: 0.0870
+Opt: ADAM                grad: OLS        epoch:  99      mse: 0.0542
+Opt: RMSprop             grad: OLS        epoch:  99      mse: 0.0562
+Opt: ADAgrad             grad: OLS        epoch:  14      mse: 0.0542
+Opt: Momentum            grad: OLS        epoch:  10      mse: 0.0542
+Opt: No optimizer        grad: Ridge      epoch:  10      mse: 0.0540
+Opt: ADAM                grad: Ridge      epoch:  61      mse: 0.0502
+Opt: RMSprop             grad: Ridge      epoch:  10      mse: 0.0501
+Opt: ADAgrad             grad: Ridge      epoch:  10      mse: 0.0501
+Opt: Momentum            grad: Ridge      epoch:  10      mse: 0.0501
+Opt: No optimizer        grad: Lasso      epoch:  10      mse: 0.0498
+Opt: ADAM                grad: Lasso      epoch:  99      mse: 0.0505
+Opt: RMSprop             grad: Lasso      epoch:  99      mse: 0.0488
+Opt: ADAgrad             grad: Lasso      epoch:  14      mse: 0.0491
+Opt: Momentum            grad: Lasso      epoch:  10      mse: 0.0491
+Numb features: 4
+Opt: No optimizer        grad: OLS        epoch:  99      mse: 0.1134
+Opt: ADAM                grad: OLS        epoch:  99      mse: 0.0308
+Opt: RMSprop             grad: OLS        epoch:  25      mse: 0.0268
+Opt: ADAgrad             grad: OLS        epoch:  18      mse: 0.0262
+Opt: Momentum            grad: OLS        epoch:  10      mse: 0.0262
+Opt: No optimizer        grad: Ridge      epoch:  10      mse: 0.0262
+Opt: ADAM                grad: Ridge      epoch:  97      mse: 0.0483
+Opt: RMSprop             grad: Ridge      epoch:  10      mse: 0.0484
+Opt: ADAgrad             grad: Ridge      epoch:  10      mse: 0.0485
+Opt: Momentum            grad: Ridge      epoch:  10      mse: 0.0485
+Opt: No optimizer        grad: Lasso      epoch:  10      mse: 0.0489
+Opt: ADAM                grad: Lasso      epoch:  99      mse: 0.0425
+Opt: RMSprop             grad: Lasso      epoch:  99      mse: 0.0476
+Opt: ADAgrad             grad: Lasso      epoch:  99      mse: 0.0443
+Opt: Momentum            grad: Lasso      epoch:  10      mse: 0.0442
+Numb features: 6
+Opt: No optimizer        grad: OLS        epoch:  99      mse: 0.1090
+Opt: ADAM                grad: OLS        epoch:  83      mse: 0.0319
+Opt: RMSprop             grad: OLS        epoch:  22      mse: 0.0309
+Opt: ADAgrad             grad: OLS        epoch:  18      mse: 0.0298
+Opt: Momentum            grad: OLS        epoch:  10      mse: 0.0298
+Opt: No optimizer        grad: Ridge      epoch:  10      mse: 0.0297
+Opt: ADAM                grad: Ridge      epoch:  83      mse: 0.0442
+Opt: RMSprop             grad: Ridge      epoch:  10      mse: 0.0441
+Opt: ADAgrad             grad: Ridge      epoch:  10      mse: 0.0441
+Opt: Momentum            grad: Ridge      epoch:  10      mse: 0.0441
+Opt: No optimizer        grad: Lasso      epoch:  10      mse: 0.0443
+Opt: ADAM                grad: Lasso      epoch:  99      mse: 0.0373
+Opt: RMSprop             grad: Lasso      epoch:  99      mse: 0.0431
+Opt: ADAgrad             grad: Lasso      epoch:  99      mse: 0.0384
+Opt: Momentum            grad: Lasso      epoch:  10      mse: 0.0381
