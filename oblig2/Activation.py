@@ -1,28 +1,37 @@
-#import numpy as np
 import autograd.numpy as np
-from autograd import grad, elementwise_grad
-from sklearn import datasets
-import matplotlib.pyplot as plt
-from sklearn.metrics import accuracy_score
+from abc import ABC, abstractmethod
 
+class Acitvation(ABC):
+    @abstractmethod
+    def __call__(self, z):
+        pass
+    @abstractmethod
+    def derivative(self, z):
+        pass
+    @abstractmethod
+    def __str__(self):
+        "-Activation function-"
 
-class Softmax:
-    def __init__(self, crossEntropy : bool):
+class Softmax(Acitvation):
+    def __init__(self, crossEntropy : bool = True):
         self.crossEntropy = crossEntropy
 
     def __call__(self, z):
         """Compute softmax values for each set of scores in the rows of the matrix z.
         Used with batched input data."""
-        e_z = np.exp(z - np.max(z, axis=0))
+        e_z = np.exp(z)# - np.max(z, axis=0))
         return e_z / np.sum(e_z, axis=1)[:, np.newaxis]
     
     def derivative(self, z):
-        if self.crossEntropy: 
+        if self.crossEntropy:
             return 1
         else:
             return 0 # should be else
         
-class ReLU:
+    def __str__(self):
+        return "Softmax"
+        
+class ReLU(Acitvation):
     def __init__(self):
         pass
     
@@ -31,17 +40,26 @@ class ReLU:
 
     def derivative(self, z):
         return np.where(z > 0, 1, 0)
+
+    def __str__(self):
+        return "ReLU"
     
-class Sigmoid:
+class Sigmoid(Acitvation):
     def __call__(self, z):
         return 1 / (1 + np.exp(-z))
     
     def derivative(self, z):
         return np.exp(z) / (1 + np.exp(z)) ** 2
+
+    def __str__(self):
+        return "Sigmoid"
     
-class Dummy:
+class Dummy(Acitvation):
     def __call__(self, z):
         return z
 
     def derivative(self, z):
         return 1
+    
+    def __str__(self):
+        return "None"
