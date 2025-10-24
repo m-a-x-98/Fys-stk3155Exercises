@@ -15,9 +15,6 @@ class NN(ABC):
     def compile(self, cost, optimizer, lrScheduler = None):
         pass
     @abstractmethod
-    def forward(self, x):
-        pass
-    @abstractmethod
     def predict(self, x):
         pass
     @abstractmethod

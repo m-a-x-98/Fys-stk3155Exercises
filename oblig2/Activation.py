@@ -63,3 +63,13 @@ class Dummy(Acitvation):
     
     def __str__(self):
         return "None"
+
+class Tanh(Acitvation):
+    def __call__(self, z):
+        return (np.exp(2*z) - 1) / (np.exp(2*z) + 1)
+
+    def derivative(self, z):
+        return 4 / np.power((np.exp(-z) + np.exp(z)), 2)
+
+    def __str__(self):
+        return "Tanh"

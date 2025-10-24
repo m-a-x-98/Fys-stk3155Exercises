@@ -13,8 +13,6 @@ from Metrics import ClassificationMetrics
 from sklearn import datasets
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
-from sklearn.model_selection import train_test_split
-
 
 
 # ----------------------------------------
@@ -52,6 +50,7 @@ def accuracy(predictions, targets):
         one_hot_predictions[i, np.argmax(prediction)] = 1
     return accuracy_score(one_hot_predictions, targets)
 
+from sklearn.model_selection import train_test_split
 
 x_train, x_test, y_train, y_test = train_test_split(iris.data, targets, test_size = 0.2)
 print(x_train.shape)
@@ -73,17 +72,17 @@ lrScheduler = StepLR(initLearningRate, 0.98, 25)
 
 model.compile(CrossEntropy(), Optimizers.ADAM(initLearningRate, 0.99, 0.99), lrScheduler)
 
-model.checkWithAutograd = True
+model.checkWithAutograd = False
 
 
 # Get information about the model
 model.summary()
-print(""*60)
+print("="*60)
 model.specifics()
 
 
 # Train the model
-epoch = 1000
+epoch = 4000
 for i in range(epoch):
     model.step(x_train, y_train)
 
